@@ -1,10 +1,10 @@
 {
   "name": "kenjirawat",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node index.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/kenjirawat/SellBook/issues"
   },
-  "homepage": "https://github.com/kenjirawat/SellBook#readme"
+  "homepage": "https://github.com/kenjirawat/SellBook#readme",
+  "dependencies": {
+    "angular": "^1.5.2",
+    "express": "^4.13.4"
+  },
+  "devDependencies": {},
+  "description": ""
 }
