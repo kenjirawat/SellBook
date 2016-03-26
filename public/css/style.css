@@ -82,7 +82,8 @@ body {
   color: #333;
   background: #eee;
   -webkit-font-smoothing: antialiased;
-  font-family: "Montserrat", sans-serif;
+  /*font-family: "Montserrat", sans-serif;*/
+  font-family: 'Kanit', sans-serif;
   font-size: 20px;
   letter-spacing: -.015em;
   margin-left: 0.12%;
@@ -93,7 +94,7 @@ body {
   margin-bottom: 1em;
 }
 .header h1 {
-  font-size: 1em;
+  font-size: 1.5em;
   font-weight: bold;
   margin: 1.5em 0;
 }
@@ -123,11 +124,11 @@ body {
 }
 .forms .sectionHead {
   width: 100%;
-  padding: 1em 1.5em;
-  background: #f2f2f2;
+  padding: 0.9em 1.5em;
+  background: rgba(24, 255, 63, 0.89);
   border-bottom: 1px solid #D0D0D0;
   font-weight: bold;
-  font-size: .9em;
+  font-size: 1.1em;
 }
 .forms .sectionHead span {
   padding: .75em .5em;
@@ -227,10 +228,11 @@ body {
 .receipt h2 {
   width: 100%;
   padding: 1em 1.5em;
-  background: #f2f2f2;
+  background: #ff8533;
   border-bottom: 1px solid #D0D0D0;
   font-weight: bold;
-  font-size: .9em;
+  color: rgba(51, 51, 51, 0.88);
+  font-size: 1.1em;
 }
 .receipt .cartWrap {
   padding: 1em 5%;
@@ -290,14 +292,14 @@ ul#billingInfo {
 }
 .items .cartSection {
   float: left;
-  width: 85%;
+  width: 95%;
 }
 .items .cartSection h3 {
   font-weight: bold;
   font-size: .85em;
 }
 .items .cartSection p {
-  font-size: .65em;
+  font-size: .75em;
   color: #676767;
   display: inline-block;
 }
@@ -311,7 +313,7 @@ ul#billingInfo {
 }
 
 .subtotal {
-  font-size: .7em;
+  font-size: 1em;
   padding: 0 5% 1em;
 }
 .subtotal li {
@@ -342,6 +344,13 @@ ul#billingInfo {
     font-size: 16px;
   }
 }
+img:hover {
+  filter: alpha(opacity=70);
+  opacity:.7
+}
 img {
-  width: 220px;
+  box-shadow: 5px 5px 5px #4d4d4d;  
+  -webkit-transition:0.7s;
+  -moz-transition:0.7s;
+  -o-transition:0.7s;
 }
