@@ -41,12 +41,12 @@
         <h6 ng-show ="(priceSum-sell) == 0" align="center" >ยังไม่มีรายการสินค้า</h6>
         <div class="cartSection" ng-repeat = "list in choose track by $index">
             <h6>{{list.name}}</h6>
-           <p>ทั้งหมด {{list.quantity}} เล่ม </p>
+            <p>ทั้งหมด {{list.quantity}} เล่ม </p>
           <a href="#">
-            <font color="green"><div class="glyphicon glyphicon-plus green" ng-click = "add(list,$index)" ></div></font>
+            <font color="green"><div class="glyphicon glyphicon-plus green" ng-click = "add(list,$index)" id="ad{{$index+1}}" ></div></font>
           </a>
           <a href="#">
-            <font color="red"><span class="glyphicon glyphicon-trash" ng-click = "delete($index)" ></span></font>
+            <font color="red"><span class="glyphicon glyphicon-trash" ng-click = "delete($index)" id="del{{$index+1}}" ></span></font>
           </a>
         </div>
       </div>
