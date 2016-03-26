@@ -15,34 +15,10 @@
   <title>Sell Books HerryPotter</title>
 </head>
 <body ng-controller="AppBook">
-  <!-- <table>
-    <tr ng-repeat = "data in books">
-      <td>
-        <img ng-src="./img/{{data.img}}" height="300"/>
-      </td>
-      <td>
-        {{data.name}}<br>
-        <h1>
-          {{data.price}}  ฿
-        </h1>
-      </td>
-      <td>
-        <button ng-click = "add(data,$index)" >Add</button>
-      </td>
-    </tr>
-  </table> -->
-  <!-- <ul class='list-inline' ng-repeat = "data in books">
-    <li class='book'>
-      <img ng-src="./img/{{data.img}}" ng-click = "add(data,$index)" /><br>
-    </li>
-    <li>
-      <h4>ราคา : {{data.price}}  ฿</h4>
-    </li>
-  </ul> -->
   <div class="wrap">
   <div class="header cf">
     <div class="gov">
-      <h1>บ้านนายจิน</h1>
+      <h1>บ้านนายจิน Shopping Book</h1>
     </div>
   </div>
   <div class="gov">
@@ -63,8 +39,6 @@
         <div class="cartSection" ng-repeat = "list in choose track by $index">
             <h6>{{list.name}}</h6>
            <p>ทั้งหมด {{list.quantity}} เล่ม </p>
-          <!-- <p class="stockStatus"> In Stock</p> -->
-          <!-- <button ng-click = "delete($index)">Delete</button> -->
           <a href="#">
             <font color="green"><div class="glyphicon glyphicon-plus green" ng-click = "add(list,$index)" ></div></font>
           </a>
@@ -76,31 +50,14 @@
       </li>
     </ul>
 
-
     <ul class="subtotal cf" ng-hide="(priceSum-sell) == 0">
-      <li class="totalRow"><span class="value">ราคา : {{priceSum}} ฿</span></li>
+      <li class="totalRow">ราคา : <span class="value">{{priceSum}}</span> บาท</li>
       <li class="totalRow">ส่วนลด : <span class="value" id="sell">{{sell}}</span> บาท</li>
       <li class="totalRow">ราคาที่ต้องจ่าย : <span class="value" id="sum">{{priceSum-sell}}</span> บาท</li>
     </ul>
     </div>
   </div>
 </div>
-
-  <!-- <table>
-    <tr ng-repeat = "list in choose track by $index">
-      <td>
-        {{list.name}}
-        {{list.quantity}}
-      </td>
-      <td>
-        <button ng-click = "delete($index)">Delete</button>
-      </td>
-    </tr>
-  </table>
-
-  <h3> ราคาส่วนลด = {{sell}} ฿</h3>
-  <h3> ราคารวม = {{priceSum-sell}} ฿ </h3> -->
-
 
 </body>
 </html>

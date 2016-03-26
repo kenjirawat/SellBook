@@ -1,5 +1,5 @@
-// /* global describe, before, beforeEach, afterEach,it */
-// require('mocha-generators').install()
+/* global describe,it */
+require('mocha-generators').install()
 //
 // var Nightmare = require('..')
 // var chai = require('chai')
@@ -22,39 +22,69 @@
 //     afterEach(function * () {
 //       yield nightmare.end()
 //     })
-//     it('ซื้อเล่ม 1 จำนวน 2 เล่ม ส่วนลดต้องเท่ากับ 0', function * () {
+//     it('ซื้อเล่ม 1 จำนวน 2 เล่ม ส่วนลดต้องเท่ากับ 0 ราคา 200', function * () {
 //       var case1 = yield nightmare
-//         .goto('http://localhost:5000')
-//         .wait(2000)
-//         .click('#book1')
-//         // .click('.book1')
-//         .evaluate(function () {
-//           this.price = document.querySelector('#sell').innerHTML
-//           return this.price
-//         })
-//       case1.should.equal('0.00')
+//       //   .goto('http://localhost:5000')
+//       //   .wait(2000)
+//       //   .click('#book1')
+//       //   // .click('.book1')
+//       //   .evaluate(function () {
+//       //     this.price = document.querySelector('#sell').innerHTML
+//       //     return this.price
+//       //   })
+//       // case1.should.equal('0.00')
 //     })
 //   })
 // })
+// var Nightmare = require('nightmare')
+// var nightmare = Nightmare({show: true, paths: {userData: './public/index.html'}})
+//
+// nightmare
+//   .goto('http://localhost:5000/')
+//   // .type('input[title="Search"]', 'github nightmare')
+//   .wait('#book1')
+//   .click('#book1')
+//   .click('#book1')
+//   .wait(1000)
+//   .click('#book2')
+//   .wait(2000)
+//   .evaluate(function () {
+//     return document.querySelector('#sum').innerHTML
+//   })
+//   .end()
+//   .then(function (result) {
+//     if (result === '280') {
+//       console.log(true)
+//     } else console.log(false)
+//     // console.log(result)
+//   })
+var expect = require('chai').expect // jshint ignore:line
 var Nightmare = require('nightmare')
-var nightmare = Nightmare({show: true, paths: {userData: './public/index.html'}})
 
-nightmare
-  .goto('http://localhost:5000/')
-  // .type('input[title="Search"]', 'github nightmare')
-  .wait('#book1')
-  .click('#book1')
-  .click('#book1')
-  .wait(1000)
-  .click('#book2')
-  .wait(2000)
-  .evaluate(function () {
-    return document.querySelector('#sum').innerHTML
+describe('test Buy book', function () {
+  it('เลือกคลิก หนังสือ 1 เล่ม', function * () {
+    this.timeout(30000)
+    var nightmare = Nightmare()
+    var link = yield nightmare
+      .goto('http://localhost:5000')
+      .click('#book1')
+      .wait(1000)
+      .evaluate(function () {
+        return document.querySelector('#sum').innerHTML
+      })
+    expect(link).to.equal('100')
   })
-  .end()
-  .then(function (result) {
-    if (result === '280') {
-      console.log(true)
-    } else console.log(false)
-    // console.log(result)
+  it('เลือกคลิก หนังสือ 2 เล่ม', function * () {
+    this.timeout(30000)
+    var nightmare = Nightmare()
+    var link = yield nightmare
+      .goto('http://localhost:5000')
+      .click('#book1')
+      .click('#book1')
+      .wait(1000)
+      .evaluate(function () {
+        return document.querySelector('#sum').innerHTML
+      })
+    expect(link).to.equal('200')
   })
+})
