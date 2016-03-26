@@ -26,28 +26,28 @@ angular.module('app', [])
       },
       {
         id: 4,
-        name: 'แฮร์รี่ พอตเตอร์ กับถ้วยอัคน',
+        name: 'Harry Poter กับถ้วยอัคน',
         price: 100,
         img: '4.jpg',
         quantity: 1
       },
       {
         id: 5,
-        name: 'แฮร์รี่ พอตเตอร์ กับภาคีนกฟีนิกซ์',
+        name: 'Harry Poter กับภาคีนกฟีนิกซ์',
         price: 100,
         img: '5.jpg',
         quantity: 1
       },
       {
         id: 6,
-        name: 'แฮร์รี่ พอตเตอร์ กับเจ้าชายเลือดผสม',
+        name: 'Harry Poter กับเจ้าชายเลือดผสม',
         price: 100,
         img: '6.jpg',
         quantity: 1
       },
       {
         id: 7,
-        name: 'แฮร์รี่พอตเตอร์ กับเครื่องรางยมทูต',
+        name: 'Harry Poter กับเครื่องรางยมทูต',
         price: 100,
         img: '7.jpg',
         quantity: 1

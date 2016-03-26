@@ -62,7 +62,7 @@ var expect = require('chai').expect // jshint ignore:line
 var Nightmare = require('nightmare')
 
 describe('test Buy book', function () {
-  it('เลือกคลิก หนังสือ 1 เล่ม', function * () {
+  it('เลือกคลิก หนังสือ 1 เล่ม ', function * () {
     this.timeout(30000)
     var nightmare = Nightmare()
     var link = yield nightmare
