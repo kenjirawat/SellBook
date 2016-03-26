@@ -16,7 +16,7 @@ $ npm install
 $ npm start
 ```
 ### 4. Test
-######คำสั่ง run file test เพื่อทำการ test การทำงาน ของ Programe
+######คำสั่ง run file test เพื่อทำการ test การทำงาน ของ Program
 ```
 $ npm test
 ```
