@@ -51,7 +51,7 @@
     <h1 class="sectionHead cf"><span>Book</span>Harry Potter</h1>
     <ul class='list-inline' >
        <li ng-repeat = "data in books">
-         <a href="#"><img ng-src="./img/{{data.img}}" class="img-responsive book($index)" ng-click = "add(data,$index)" /></a>
+         <a href="#"><img ng-src="./img/{{data.img}}" class="img-responsive" id="book{{$index + 1}}" ng-click = "add(data,$index)" /></a>
        </li>
     </ul>
   </div>
@@ -77,7 +77,7 @@
 
     <ul class="subtotal cf" ng-hide="(priceSum-sell) == 0">
       <li class="totalRow"><span class="value">ราคา : {{priceSum}} ฿</span></li>
-      <li class="totalRow"><span class="value">ส่วนลด : {{sell}} ฿</span></li>
+      <li class="totalRow"><span class="value" id="sell">ส่วนลด : {{sell}} ฿</span></li>
       <li class="totalRow"><span class="value">ราคาที่ต้องจ่าย : {{priceSum-sell}} ฿</span></li>
     </ul>
     </div>

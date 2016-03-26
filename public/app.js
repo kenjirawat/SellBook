@@ -139,6 +139,7 @@ angular.module('app', [])
 
       // $scope.sum += 100
       // console.log($scope.choose)
+      console.log($scope.choose)
     }
     $scope.delete = function (index) {
       if ($scope.choose[index].quantity > 1) {

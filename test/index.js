@@ -19,7 +19,6 @@ describe('TEST Buy Harry Potter Book', function () {
     beforeEach(function () {
       nightmare = Nightmare()
     })
-
     afterEach(function * () {
       yield nightmare.end()
     })
@@ -27,11 +26,11 @@ describe('TEST Buy Harry Potter Book', function () {
       var case1 = yield nightmare
         .goto('http://localhost:5000')
         .wait(2000)
-        .click('.book1')
+        .click('#b1')
         // .click('.book1')
         .evaluate(function () {
-          this.price = document.querySelector('.total2').innerHTML
-          return this.price.substr(1, this.price.length - 1)
+          this.price = document.querySelector('.sell').innerHTML
+          return this.price
         })
       case1.should.equal('0.00')
     })
