@@ -77,8 +77,8 @@
 
     <ul class="subtotal cf" ng-hide="(priceSum-sell) == 0">
       <li class="totalRow"><span class="value">ราคา : {{priceSum}} ฿</span></li>
-      <li class="totalRow"><span class="value" id="sell">ส่วนลด : {{sell}} ฿</span></li>
-      <li class="totalRow"><span class="value">ราคาที่ต้องจ่าย : {{priceSum-sell}} ฿</span></li>
+      <li class="totalRow">ส่วนลด : <span class="value" id="sell">{{sell}}</span> บาท</li>
+      <li class="totalRow">ราคาที่ต้องจ่าย : <span class="value" id="sum">{{priceSum-sell}}</span> บาท</li>
     </ul>
     </div>
   </div>
