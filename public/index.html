@@ -51,7 +51,7 @@
     <h1 class="sectionHead cf"><span>Book</span>Harry Potter</h1>
     <ul class='list-inline' >
        <li ng-repeat = "data in books">
-         <a href="#"><img ng-src="./img/{{data.img}}" class="img-responsive" ng-click = "add(data,$index)" /></a>
+         <a href="#"><img ng-src="./img/{{data.img}}" class="img-responsive book($index)" ng-click = "add(data,$index)" /></a>
        </li>
     </ul>
   </div>

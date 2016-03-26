@@ -72,7 +72,7 @@ angular.module('app', [])
         // })
         $scope.choose[$scope.checkindex(data.id)].quantity++
         // $scope.sum++
-      }else {
+      } else {
         $scope.choose.push(data)
         // $scope.sum++
         $scope.booknum++
@@ -172,7 +172,7 @@ angular.module('app', [])
     }
     $scope.cal = function () {
       $scope.priceSum = 0
-      for (var i = 0 ; i < $scope.choose.length ; i++) {
+      for (var i = 0; i < $scope.choose.length; i++) {
         $scope.priceSum += $scope.choose[i].quantity * 100
       }
     }
@@ -184,7 +184,7 @@ angular.module('app', [])
         return 0
       })
       var amount = []
-      for (var count = 0; count < $scope.choose.length ; count++) {
+      for (var count = 0; count < $scope.choose.length; count++) {
         amount.push($scope.choose[count].quantity)
       }
       console.log(amount)
@@ -193,7 +193,7 @@ angular.module('app', [])
       $scope.sell = 0
       $scope.cal()
       do {
-        for (var i = 0 ; i < amount.length ; i++) {
+        for (var i = 0; i < amount.length; i++) {
           if (amount[i] !== 0) {
             countlist += 1
           }
@@ -208,19 +208,19 @@ angular.module('app', [])
         if (countlist === 2) {
           $scope.sell += ((countlist * 100) * 0.1)
           console.log('2')
-        }else if (countlist === 3) {
+        } else if (countlist === 3) {
           $scope.sell += ((countlist * 100) * 0.2)
           console.log('3')
-        }else if (countlist === 4) {
+        } else if (countlist === 4) {
           $scope.sell += ((countlist * 100) * 0.3)
           console.log('4')
-        }else if (countlist === 5) {
+        } else if (countlist === 5) {
           $scope.sell += ((countlist * 100) * 0.4)
           console.log('5')
-        }else if (countlist === 6) {
+        } else if (countlist === 6) {
           $scope.sell += ((countlist * 100) * 0.5)
           console.log('6')
-        }else if (countlist === 7) {
+        } else if (countlist === 7) {
           $scope.sell += ((countlist * 100) * 0.6)
           console.log('7')
         } else if (countlist === 0) {
@@ -228,7 +228,7 @@ angular.module('app', [])
           console.log('exit')
         }
         console.log('count = ' + countlist)
-        for (var d = 0 ; d < amount.length ; d++) {
+        for (var d = 0; d < amount.length; d++) {
           if (amount[d] > 0) {
             amount[d] -= 1
             countlist = 0

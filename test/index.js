@@ -28,7 +28,7 @@ describe('TEST Buy Harry Potter Book', function () {
         .goto('http://localhost:5000')
         .wait(2000)
         .click('.book1')
-        .click('.book1')
+        // .click('.book1')
         .evaluate(function () {
           this.price = document.querySelector('.total2').innerHTML
           return this.price.substr(1, this.price.length - 1)
