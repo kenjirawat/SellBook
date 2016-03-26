@@ -42,8 +42,7 @@
   <div class="wrap">
   <div class="header cf">
     <div class="gov">
-      <h1>Shopping Books</h1>
-      <!-- <img src="http://www.abril.com.br/especiais2011/harry-potter/img/logo-harry-potter.png" alt="" /> -->
+      <h1>บ้านนายจิน</h1>
     </div>
   </div>
   <div class="gov">
@@ -67,7 +66,10 @@
           <!-- <p class="stockStatus"> In Stock</p> -->
           <!-- <button ng-click = "delete($index)">Delete</button> -->
           <a href="#">
-            <font color="red"><span class="glyphicon glyphicon-remove" ng-click = "delete($index)" ></span></font>
+            <font color="green"><div class="glyphicon glyphicon-plus green" ng-click = "add(list,$index)" ></div></font>
+          </a>
+          <a href="#">
+            <font color="red"><span class="glyphicon glyphicon-trash" ng-click = "delete($index)" ></span></font>
           </a>
         </div>
       </div>

@@ -10,21 +10,21 @@ angular.module('app', [])
     $scope.books = [
       {
         id: 1,
-        name: 'แฮร์รี่ พอตเตอร์ กับศิลาอาถรรพ์',
+        name: 'Harry Poter กับศิลาอาถรรพ์',
         price: 100,
         img: '1.jpg',
         quantity: 1
       },
       {
         id: 2,
-        name: 'แฮร์รี่ พอตเตอร์ กับห้องแห่งความลับ',
+        name: 'Harry Poter กับห้องแห่งความลับ',
         price: 100,
         img: '2.jpg',
         quantity: 1
       },
       {
         id: 3,
-        name: 'แฮร์รี่ พอตเตอร์ กับนักโทษแห่งอัซคาบัน',
+        name: 'Harry Poter กับนักโทษแห่งอัซคาบัน',
         price: 100,
         img: '3.jpg',
         quantity: 1

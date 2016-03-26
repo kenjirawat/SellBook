@@ -349,8 +349,9 @@ img:hover {
   opacity:.7
 }
 img {
-  box-shadow: 5px 5px 5px #4d4d4d;  
+  box-shadow: 5px 5px 5px #4d4d4d;
   -webkit-transition:0.7s;
   -moz-transition:0.7s;
   -o-transition:0.7s;
 }
+A:link { color: #F7B810; text-decoration:none}
