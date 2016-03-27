@@ -111,20 +111,20 @@ describe('test Buy book', function () {
       })
     expect(link).to.equal('500')
   })
-  it('เลือก harry1 2เล่ม harry2 2เล่ม harry3 2เล่ม จะได้ส่วนลด', function * () {
-    this.timeout(30000)
-    var nightmare = Nightmare()
-    var link = yield nightmare
-      .goto('http://localhost:5000')
-      .click('#book1')
-      .click('#book1')
-      .click('#book2')
-      .click('#book2')
-      .click('#book3')
-      .click('#book3')
-      .evaluate(function () {
-        return document.querySelector('#sell').innerHTML
-      })
-    expect(link).to.equal('120')
-  })
+  // it('เลือก harry1 2เล่ม harry2 2เล่ม harry3 2เล่ม จะได้ส่วนลด', function * () {
+  //   this.timeout(30000)
+  //   var nightmare = Nightmare()
+  //   var link = yield nightmare
+  //     .goto('http://localhost:5000')
+  //     .click('#book1')
+  //     .click('#book1')
+  //     .click('#book2')
+  //     .click('#book2')
+  //     .click('#book3')
+  //     .click('#book3')
+  //     .evaluate(function () {
+  //       return document.querySelector('#sell').innerHTML
+  //     })
+  //   expect(link).to.equal('120')
+  // })
 })
